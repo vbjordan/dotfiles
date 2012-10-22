@@ -1,0 +1,60 @@
+startup_message off
+vbell off
+defscrollback 1000
+hardstatus on
+hardstatus alwayslastline
+hardstatus string "%{.kw}%-w%{.Kw}%n %t%{-}%+w %=%c %m/%d/%y" #black+grey+normal
+# caption on
+# caption splitonly
+# caption string "%{.kw}%-w%{.Kw}%n %t%{-}%+w %=%c %m/%d/%y" #black+grey+normal
+
+# bindkey -k k7 prev
+# bindkey -k k7 next
+bindkey [1;9D prev
+bindkey [1;9C next
+bind j focus down
+bind k focus up
+bind t focus top
+bind b focus bottom
+bind h eval "hardstatus ignore"
+bind H eval "hardstatus alwayslastline"
+# Change the xterm initialization string from is2=\E[!p\E[?3;4l\E[4l\E>
+# # (This fixes the "Aborted because of window size change" konsole symptoms found
+# #  in bug #134198)
+termcapinfo xterm* 'is=\E[r\E[m\E[2J\E[H\E[?7h\E[?1;4;6l'
+#hardstatus string "%{.kc}%-w%{.kc}%n*%t%{-}%+w %=%c %m/%d/%y" #black+cyan+normal
+#
+# caption always "%{kB}%?%-Lw%?%{bw}%n*%f %t%?(%u)%?%{kB}%?%+Lw%?"
+#
+# hardstatus off
+# hardstatus alwayslastline
+# hardstatus string "%{+b wk} %-w%{+b wk} %n %t %{-}%+w %41=%H @ %l %-= %= %D,%c:%s "
+# terminfo rxvt-unicode 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
+# term screen-256color
+#caption always ""
+# hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %m-%d %{W}%c %{g}]'
+# hardstatus alwayslastline "%{BW}%16=%l %{BW}%50=%m-%d-%y %{BW}%80=%c%="
+# caption always "%H %c | %-w%{=}%n-%t%{-}%+w"
+# hardstatus alwayslastline "%-Lw%{= BW}%50>%n%f* %t%{-}%+Lw%< "
+
+#caption always "%{= Wk}%-w%{= Bw}%n %t%{-}%+w %-="
+#hardstatus alwayslastline '%{= dd}%{= Wr} %D %d %M %c > %{= Ww}%-w%{= Wk}%n %t%{= Ww}%+w %{= dd} %='
+# good!
+# caption always "%?%{ Wk}%-Lw%?%{Rk}%n*%f %t%?(%u)%?%?%{Wk}%+Lw%? %{Rk}%=%c %{rk}%d/%M/%Y"
+# hardstatus string "%{+b Rk}(%{-b g}$LOGNAME@%H%{+b R}) (%{-b g}%C %a%{+b R}) %{-b g} %n %t %h"
+#
+# hardstatus string '%{= kG}%-Lw%{= kW}%50> %n*%f %t%{= kG}%+Lw%< %{= kG}%-=%D %m/%d/%y | %C:%s %A | %1`%{-}'
+#
+# hardstatus string '%{= kG}%{C}Screen: %{c}%{= kG}[%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{C} %d-%m %{W}%c %{g}]'
+#
+# hardstatus string "%{.kc}%-w%{.kw}%n*%t%{-}%+w %= | %1` | %2`C | %3`/%4` | %5`% | %6`/%7` | %c %d/%m/%Y"
+#hardstatus string '%{= R}[%{w}%H%{R}][%{w}%=%?%-Lw%?%{R}%n*%f%t%?(%u)%? %{w}%?%+Lw%?%?%=%{R}][%{w}%m/%d %{W}%C%A%{R}]'
+##hardstatus string "%{=b kw} %?%-Lw%?%{=br kw}[%n %t]%{=b kw}%?%+Lw%? %="
+#caption always "%{= kb}[ %=%{w}%?%-Lw%?%{b}(%{W}%n*%f %t%?(%u)%?%{b})%{w}%?%+Lw%?%?%= %{b}][%{B} %H %{W}%l %{b}][%{B} %d.%m.%Y %{W}%0c %{b}]"
+
+
+
+
+
+
+
