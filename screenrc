@@ -51,10 +51,3 @@ termcapinfo xterm* 'is=\E[r\E[m\E[2J\E[H\E[?7h\E[?1;4;6l'
 #hardstatus string '%{= R}[%{w}%H%{R}][%{w}%=%?%-Lw%?%{R}%n*%f%t%?(%u)%? %{w}%?%+Lw%?%?%=%{R}][%{w}%m/%d %{W}%C%A%{R}]'
 ##hardstatus string "%{=b kw} %?%-Lw%?%{=br kw}[%n %t]%{=b kw}%?%+Lw%? %="
 #caption always "%{= kb}[ %=%{w}%?%-Lw%?%{b}(%{W}%n*%f %t%?(%u)%?%{b})%{w}%?%+Lw%?%?%= %{b}][%{B} %H %{W}%l %{b}][%{B} %d.%m.%Y %{W}%0c %{b}]"
-
-
-
-
-
-
-

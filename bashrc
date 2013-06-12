@@ -12,19 +12,49 @@ export SVN_EDITOR=vim
 set -o vi
 set editing-mode vi
 
-PATH=$PATH:~/local/bin:~/svn/truliapro
+export PATH=$PATH:~/local/bin:~/git/truliapro:~/bin
+export MANPATH=$MANPATH:~/local/man:~/bin/share/man
+
+export CDPATH=.:~/git:~/public_html
+
 
 export LESS=-RX
 
+export GREP_OPTIONS='--color=auto'
 export GREP_COLORS="mc=00;36:ms=31:mt=01;38:ln=31"
 export ACK_PAGER="less"
 export GIT_SSL_NO_VERIFY=true
 
 export REPO="svn+ssh://svn.utah.trulia.com/usr/local/svnrepos/TRULIA/"
 
+# source /etc/bash_completion.d/git
+if [ -f ~/etc/bash_completion ]
+then
+  source ~/etc/bash_completion
+fi
+
+if [ -f ~/etc/bash_completion_tmux.sh ]
+then
+  source ~/etc/bash_completion_tmux.sh
+fi
+
+if [ -f ~/git/dotfiles/skeleton/trulia.ps1.bash ]
+then
+  source ~/git/dotfiles/skeleton/trulia.ps1.bash
+fi
+
+export LANG="en_US.UTF-8"
+export LC_COLLATE="en_US.UTF-8"
+export LC_CTYPE="en_US.UTF-8"
+export LC_MESSAGES="en_US.UTF-8"
+export LC_MONETARY="en_US.UTF-8"
+export LC_NUMERIC="en_US.UTF-8"
+export LC_TIME="en_US.UTF-8"
+export LC_ALL="en_US.UTF-8"
+
 function mygrep ()
 {
-  cmd="grep -$1 --color=always \"$2\" $3 | grep -v '\.svn' | grep -v 'tags' $4"
+  cmd="grep -$1 --color=always \"$2\" $3 | grep -v \"\.git/*\" | grep -v 'tags' $4"
   echo $cmd 
   eval $cmd
 }
