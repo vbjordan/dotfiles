@@ -8,14 +8,13 @@ fi
 . /home/vjordan/.aliases
 
 export EDITOR=vim
-export SVN_EDITOR=vim
 set -o vi
 set editing-mode vi
 
 export PATH=$PATH:~/local/bin:~/git/truliapro:~/bin
 export MANPATH=$MANPATH:~/local/man:~/bin/share/man
 
-export CDPATH=.:~/git:~/public_html
+export CDPATH=.:~/git:~/public_html:~
 
 
 export LESS=-RX
@@ -25,7 +24,6 @@ export GREP_COLORS="mc=00;36:ms=31:mt=01;38:ln=31"
 export ACK_PAGER="less"
 export GIT_SSL_NO_VERIFY=true
 
-export REPO="svn+ssh://svn.utah.trulia.com/usr/local/svnrepos/TRULIA/"
 
 # source /etc/bash_completion.d/git
 if [ -f ~/etc/bash_completion ]
@@ -54,7 +52,7 @@ export LC_ALL="en_US.UTF-8"
 
 function mygrep ()
 {
-  cmd="grep -$1 --color=always \"$2\" $3 | grep -v \"\.git/*\" | grep -v 'tags' $4"
+  cmd="grep -$1 --color=always \"$2\" $3 | grep -v \"\.git/*\" | grep -v \"tests/*\" | grep -v 'tags' $4"
   echo $cmd 
   eval $cmd
 }
