@@ -5,7 +5,14 @@ if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
 fi
 
-. /home/vjordan/.aliases
+
+if [ -f $HOME/.trulia-aliases ]; then
+	. $HOME/.trulia-aliases
+fi
+
+if [ -f $HOME/.trulia-aliases ]; then
+  . $HOME/.aliases
+fi
 
 export EDITOR=vim
 set -o vi

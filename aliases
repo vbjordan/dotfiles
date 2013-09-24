@@ -1,0 +1,15 @@
+alias lal="ls -al"
+alias vi="vim"
+alias cl="clear"
+alias vless='vim --noplugin -u /usr/share/vim/vim72/macros/less.vim'
+alias vl='vless'
+alias ls='ls --color=auto'
+alias llh='ls -lh'
+alias ld='ls -d */'
+alias cp='cp -i'
+alias ls='ls --color'
+alias ht='htop'
+alias vigs='vim .git/index +Gstatus'
+alias gs="git status"
+alias lda='ls -d $PWD/*'
+alias more='less'
