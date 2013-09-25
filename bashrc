@@ -10,7 +10,7 @@ if [ -f $HOME/.trulia-aliases ]; then
 	. $HOME/.trulia-aliases
 fi
 
-if [ -f $HOME/.trulia-aliases ]; then
+if [ -f $HOME/.aliases ]; then
   . $HOME/.aliases
 fi
 
@@ -33,19 +33,19 @@ export GIT_SSL_NO_VERIFY=true
 
 
 # source /etc/bash_completion.d/git
-if [ -f ~/etc/bash_completion ]
+if [ -f $HOME/etc/bash_completion ]
 then
-  source ~/etc/bash_completion
+  source $HOME/etc/bash_completion
 fi
 
-if [ -f ~/etc/bash_completion_tmux.sh ]
+if [ -f $HOME/etc/bash_completion_tmux.sh ]
 then
-  source ~/etc/bash_completion_tmux.sh
+  source $HOME/etc/bash_completion_tmux.sh
 fi
 
-if [ -f ~/git/dotfiles/skeleton/trulia.ps1.bash ]
+if [ -f $HOME/git/dotfiles/skeleton/trulia.ps1.bash ]
 then
-  source ~/git/dotfiles/skeleton/trulia.ps1.bash
+  source $HOME/git/dotfiles/skeleton/trulia.ps1.bash
 fi
 
 export LANG="en_US.UTF-8"
