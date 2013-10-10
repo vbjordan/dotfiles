@@ -43,9 +43,14 @@ then
   source $HOME/etc/bash_completion_tmux.sh
 fi
 
-if [ -f $HOME/git/dotfiles/skeleton/trulia.ps1.bash ]
+if [ -f $HOME/git/dotfiles/users/vjordan/trulia.ps1.bash ]
 then
-  source $HOME/git/dotfiles/skeleton/trulia.ps1.bash
+  source $HOME/git/dotfiles/users/vjordan/trulia.ps1.bash
+fi
+
+if [ -f $HOME/trulia-dotfiles/users/vjordan/trulia.ps1.bash ]
+then
+  source $HOME/trulia-dotfiles/users/vjordan/trulia.ps1.bash
 fi
 
 export LANG="en_US.UTF-8"
