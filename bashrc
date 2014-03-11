@@ -6,8 +6,8 @@ if [ -f /etc/bashrc ]; then
 fi
 
 
-if [ -f $HOME/.trulia-aliases ]; then
-	. $HOME/.trulia-aliases
+if [ -f $HOME/.aliases-trulia ]; then
+	. $HOME/.aliases-trulia
 fi
 
 if [ -f $HOME/.aliases ]; then
