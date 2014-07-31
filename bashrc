@@ -64,7 +64,7 @@ export LC_ALL="en_US.UTF-8"
 
 function mygrep ()
 {
-  cmd="grep -$1 --color=always \"$2\" $3 | grep -v \"\.git/*\" | grep -v \"tests/*\" | grep -v 'tags' $4"
+  cmd="grep -$1 --color=always \"$2\" $3 | grep -v \"\.git/*\" | grep -v \"tests/*\" | grep -v 'tags' | grep -v 'vendor' $4"
   echo $cmd 
   eval $cmd
 }
