@@ -2,7 +2,7 @@ alias ll="ls -l"
 alias lal="ls -al"
 alias vi="vim"
 alias cl="clear"
-alias vless='vim --noplugin -u /usr/share/vim/vim72/macros/less.vim'
+alias vless='vim --noplugin -u /usr/share/vim/vim74/macros/less.vim'
 alias vl='vless'
 alias ls='ls --color=auto'
 alias llh='ls -lh'
@@ -15,3 +15,5 @@ alias gs="git status"
 alias lda='ls -d $PWD/*'
 alias more='less'
 alias grep='grep --color=always'
+alias agp="ag --pager=\"less -R\""
+alias agl="agp"

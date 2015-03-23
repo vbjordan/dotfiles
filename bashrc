@@ -27,7 +27,6 @@ export CDPATH=.:~/git:~/public_html:~
 export LESS=-RX
 
 export GREP_OPTIONS='--color=auto'
-export GREP_COLORS="mc=00;36:ms=31:mt=01;38:ln=31"
 export ACK_PAGER="less"
 export GIT_SSL_NO_VERIFY=true
 
@@ -64,14 +63,14 @@ export LC_ALL="en_US.UTF-8"
 
 function mygrep ()
 {
-  cmd="grep -$1 --color=always \"$2\" $3 | grep -v \"\.git/*\" | grep -v \"tests/*\" | grep -v 'tags' | grep -v 'vendor' $4"
+  cmd="find $2 -type d \( -name .git -o -name vendor -o -name tests \) -prune -o -type f -print0 | xargs -0 egrep --color=always -in '$1'"
   echo $cmd 
   eval $cmd
 }
 
 function mg ()
 {
-  mygrep "Frisn" "$1" "$2" "| less"
+  mygrep "$1" "$2" 
 }
 
 function mgc ()
@@ -93,3 +92,13 @@ function mgv()
 {
   mygrep "Flris" "$1" "$2" "| xargs startvim vim"
 }
+
+PATH="/home/vjordan/perl5/bin${PATH+:}${PATH}"; export PATH;
+PERL5LIB="/home/vjordan/perl5/lib/perl5${PERL5LIB+:}${PERL5LIB}"; export PERL5LIB;
+PERL_LOCAL_LIB_ROOT="/home/vjordan/perl5${PERL_LOCAL_LIB_ROOT+:}${PERL_LOCAL_LIB_ROOT}"; export PERL_LOCAL_LIB_ROOT;
+PERL_MB_OPT="--install_base \"/home/vjordan/perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=/home/vjordan/perl5"; export PERL_MM_OPT;
+
+PKG_CONFIG_PATH='/home/vjordan/';
+
+LZMA_LIBS='/home/vjordan/lib';
