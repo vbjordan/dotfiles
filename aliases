@@ -1,19 +1,22 @@
 alias ll="ls -l"
 alias lal="ls -al"
+alias vim="/usr/local/bin/vim"
 alias vi="vim"
 alias cl="clear"
-alias vless='vim --noplugin -u /usr/share/vim/vim74/macros/less.vim'
+alias vless='vim --noplugin -u /usr/share/vim/vim73/macros/less.vim'
 alias vl='vless'
-alias ls='ls --color=auto'
 alias llh='ls -lh'
 alias ld='ls -d */'
 alias cp='cp -i'
-alias ls='ls --color'
 alias ht='htop'
 alias vigs='vim .git/index +Gstatus'
 alias gs="git status"
 alias lda='ls -d $PWD/*'
 alias more='less'
-alias grep='grep --color=always'
+alias grep='grep --color=auto'
 alias agp="ag --pager=\"less -R\""
 alias agl="agp"
+alias vm='ssh -p 3022 val@127.0.0.1'
+alias f2='ssh fedevsv2.sv2.trulia.com'
+alias ctags="/usr/local/bin/ctags"
+alias build-php-tags="ctags -R --fields=+aimS --languages=PHP --exclude=vendor/*test --exclude=vendor/*Test --exclude=*DevProxies"
