@@ -1,6 +1,5 @@
 alias ll="ls -l"
 alias lal="ls -al"
-alias vim="/usr/local/bin/vim"
 alias vi="vim"
 alias cl="clear"
 alias vless='vim --noplugin -u /usr/share/vim/vim73/macros/less.vim'
