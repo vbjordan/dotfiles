@@ -42,14 +42,9 @@ then
   source $HOME/etc/bash_completion_tmux.sh
 fi
 
-if [ -f $HOME/git/dotfiles/users/vjordan/trulia.ps1.bash ]
+if [ -f $HOME/work-dotfiles/users/vjordan/trulia.ps1.bash ]
 then
-  source $HOME/git/dotfiles/users/vjordan/trulia.ps1.bash
-fi
-
-if [ -f $HOME/trulia-dotfiles/users/vjordan/trulia.ps1.bash ]
-then
-  source $HOME/trulia-dotfiles/users/vjordan/trulia.ps1.bash
+  source $HOME/work-dotfiles/users/vjordan/trulia.ps1.bash
 fi
 
 export LANG="en_US.UTF-8"
@@ -102,3 +97,5 @@ PERL_MM_OPT="INSTALL_BASE=/home/vjordan/perl5"; export PERL_MM_OPT;
 PKG_CONFIG_PATH='/home/vjordan/';
 
 LZMA_LIBS='/home/vjordan/lib';
+
+export CLICOLOR=1
